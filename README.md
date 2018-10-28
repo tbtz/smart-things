@@ -9,16 +9,17 @@ You can download it [here](https://nodejs.org).
 ### Installation
 To install Smart Things with all needed dependencies simply run:
 ```
-$ npm install
+$ npm install -g @tbtz/smart-things 
 ```
 
 ### Run it
-To run the application on port :3000 use
+Run the application with:
 ```
-$ npm run
+$ sudo smart-things
 ```
+It needs sudo rights to write down the device config. 
 
 ### Your Room & Device configuration
 You can configure your whole environment using the Webapp.
-Otherwise your configuration is store in `backend/data/devices.json`.
+Otherwise your configuration is stored in the module directory under `data/devices.json`.
  

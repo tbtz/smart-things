@@ -1,6 +1,6 @@
 {
   "name": "@tbtz/smart-things",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Smart Things",
   "author": "Tom Bautz",
   "repository": "github:tbtz/smart-things",
@@ -11,11 +11,11 @@
   },
   "license": "ISC",
   "files": [
-    "lib",
+    "bin",
     "LICENSE",
     "README.md"
   ],
   "bin": {
-    "smart-things": "lib/lib.js"
+    "smart-things": "bin/smart-things.js"
   }
 }
