@@ -1,0 +1,16 @@
+.roomListPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__roomList {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+
+    width: 85%;
+    max-width: 800px;
+    margin: 0;
+
+  }
+}

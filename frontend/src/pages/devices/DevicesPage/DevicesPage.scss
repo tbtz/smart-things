@@ -1,0 +1,30 @@
+.devicesPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__deviceList {
+    width: 85%;
+    max-width: 800px;
+    margin: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .deviceTile {
+      width: 47%;
+      height: 0;
+      padding-bottom: 47%;
+      margin: 0 0 6%;
+      font-size: 28px;
+      line-height: 1;
+
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

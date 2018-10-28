@@ -1,0 +1,26 @@
+.roomListItem {
+  border-radius: 10px;
+  background: #34c6e2dd;
+  display: flex;
+  flex-direction: column;
+
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  color: #fff;
+
+  &__name {
+    font-size: 28px;
+    align-self: flex-start;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &__count {
+    font-size: 16px;
+    font-weight: 200;
+    align-self: flex-end;
+  }
+
+  &:last-child{
+    margin-bottom: 0px;
+  }
+}

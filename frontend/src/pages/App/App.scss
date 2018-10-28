@@ -1,0 +1,22 @@
+
+.app {
+    display: flex;
+    flex-direction: column;        
+    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+
+    .errorMessage {
+        margin: 50px;
+        padding: 10px 20px;
+        background: #fffd;
+        color: #db0000;
+        border-radius: 5px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+  article {
+    flex: 1;
+  }
+}

@@ -1,0 +1,39 @@
+@import "./variables";
+
+* {
+    outline: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body, html, #root {
+    padding: 0;
+    margin: 0;
+}    
+
+input, button {
+}
+
+ul {
+    list-style: none;
+    padding: 0;    
+}
+
+
+.centered {
+    width: 95%;
+    max-width: 1000px;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+h1, h2, h3 {
+    margin: 0;    
+}

@@ -1,0 +1,24 @@
+.editRoomPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+
+  &__button {
+    width: 85%;
+    max-width: 800px;
+
+    margin-top: auto;
+
+    background: #e23434;
+    border-radius: 10px;
+    border: 0;
+    padding: 12px 5px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+}

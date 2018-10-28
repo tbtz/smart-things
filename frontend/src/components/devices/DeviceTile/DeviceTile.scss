@@ -1,0 +1,42 @@
+.deviceTile {
+    border-radius: 25px;
+    background: #555a;
+    position: relative;
+    transition: .1s;
+
+    &:active {
+        transform: scale(1.05);
+    }
+
+    &--on {
+        background: #34c6e2dd;
+    }
+    
+    &__content {
+        padding: 20px;
+    }
+
+    &__name {
+        color: #fff;
+        font-size: 28px;
+        word-break: break-word;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    &__type {
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+
+        &--ON {
+            color: #fc0;
+        }
+    }
+}

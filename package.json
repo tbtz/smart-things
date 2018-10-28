@@ -1,0 +1,11 @@
+{
+  "name": "smart-things",
+  "version": "1.0.0",
+  "description": "Smart Thins",
+  "author": "Tom Bautz",
+  "scripts": {
+    "postinstall": "cd backend && npm i && cd ../frontend && npm i && npm run build",
+    "start": "cd backend && npm start"
+  },
+  "license": "ISC"
+}
