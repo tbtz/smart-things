@@ -1,11 +1,21 @@
 {
-  "name": "smart-things",
-  "version": "1.0.0",
-  "description": "Smart Thins",
+  "name": "@tbtz/smart-things",
+  "version": "0.0.4",
+  "description": "Smart Things",
   "author": "Tom Bautz",
+  "repository": "github:tbtz/smart-things",
   "scripts": {
-    "postinstall": "cd backend && npm i && cd ../frontend && npm i && npm run build",
-    "start": "cd backend && npm start"
+    "start": "",
+    "build": "cd backend && npm i && npm run build && cd ../frontend && npm i && npm run build",
+    "release": "./release.sh"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "files": [
+    "lib",
+    "LICENSE",
+    "README.md"
+  ],
+  "bin": {
+    "smart-things": "lib/lib.js"
+  }
 }

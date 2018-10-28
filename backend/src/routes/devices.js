@@ -1,10 +1,18 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 const File = require('../models/file');
-const DEVICE_FILE_PATH = './data/home.json';
+
+const path = require('path');
+
+let ROOMS_FILE_PATH;
+if (process.env.NODE_ENV === 'production') {
+    ROOMS_FILE_PATH = path.join(__dirname, 'data/home.json');
+} else {
+    ROOMS_FILE_PATH = path.join(__dirname, './../../../data/home.json');
+}
 
 router.get('/', (req, res) => {
-    File.readJson(DEVICE_FILE_PATH)
+    File.readJson(ROOMS_FILE_PATH)
         .then(rooms => {
             const roomId = req.params.roomId;
             if (!rooms.hasOwnProperty(roomId)) {
@@ -21,7 +29,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:deviceId', (req, res) => {
-    File.readJson(DEVICE_FILE_PATH)
+    File.readJson(ROOMS_FILE_PATH)
         .then(rooms => {
             const roomId = req.params.roomId;
             if (!rooms.hasOwnProperty(roomId)) {
@@ -46,7 +54,7 @@ router.get('/:deviceId', (req, res) => {
 
 router.put('/:deviceId', (req, res) => {
     let newRooms = {};
-    File.readJson(DEVICE_FILE_PATH)
+    File.readJson(ROOMS_FILE_PATH)
         .then(rooms => {
             newRooms = rooms;
 
@@ -63,7 +71,7 @@ router.put('/:deviceId', (req, res) => {
 
             let deviceConfig = req.body;
             room.devices[deviceId] = deviceConfig;
-            return File.writeJson(DEVICE_FILE_PATH, newRooms);
+            return File.writeJson(ROOMS_FILE_PATH, newRooms);
         })
         .then(() => {
             res.send(newRooms);
@@ -76,7 +84,7 @@ router.put('/:deviceId', (req, res) => {
 
 router.post('/:deviceId', (req, res) => {
     let newRooms = {};
-    File.readJson(DEVICE_FILE_PATH)
+    File.readJson(ROOMS_FILE_PATH)
         .then(rooms => {
             newRooms = rooms;
 
@@ -93,7 +101,7 @@ router.post('/:deviceId', (req, res) => {
 
             let deviceConfig = req.body;
             room.devices[deviceId] = deviceConfig;
-            return File.writeJson(DEVICE_FILE_PATH, newRooms);
+            return File.writeJson(ROOMS_FILE_PATH, newRooms);
         })
         .then(() => {
             res.send(newRooms);
@@ -106,7 +114,7 @@ router.post('/:deviceId', (req, res) => {
 
 router.delete('/:deviceId', (req, res) => {
     let newRooms = {};
-    File.readJson(DEVICE_FILE_PATH)
+    File.readJson(ROOMS_FILE_PATH)
         .then(rooms => {
             newRooms = rooms;
 
@@ -122,7 +130,7 @@ router.delete('/:deviceId', (req, res) => {
             }
             
             delete room.devices[deviceId]
-            return File.writeJson(DEVICE_FILE_PATH, newRooms);
+            return File.writeJson(ROOMS_FILE_PATH, newRooms);
         })
         .then(() => {
             res.send(newRooms);
