@@ -1,6 +1,6 @@
 node_modules
 frontend/dist
-backend/data/home.json
+backend/data
 .idea
 *.iml
 npm-debug.log
