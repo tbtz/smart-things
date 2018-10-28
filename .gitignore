@@ -1,6 +1,8 @@
 node_modules
 frontend/dist
+backend/dist
 backend/data
+lib/data
 .idea
 *.iml
 npm-debug.log
