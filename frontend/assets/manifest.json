@@ -1,0 +1,16 @@
+{
+  "name": "Smart Things",
+  "short_name": "SmartThings",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#34c6e2",
+  "theme_color": "#34c6e2",
+  "description": "Smart Things Tasmota App.",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

@@ -60,7 +60,7 @@ module.exports = (env) => {
             ]
         },
         plugins: [
-            //new CopyWebpackPlugin([{ from: './assets/', to: 'assets' }])
+            new CopyWebpackPlugin([{ from: './assets/', to: 'assets' }])
         ],
         devServer: {
             historyApiFallback: true
